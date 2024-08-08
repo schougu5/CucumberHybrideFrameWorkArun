@@ -33,7 +33,7 @@ public class LoginPage {
 	
 	public void EnterEmailAddress(String emailText) {
 		
-		eleUtils.EnterText(EmailAddress,30,emailText);
+		eleUtils.EnterText(EmailAddress,emailText);
 		
 	//	EmailAddress.sendKeys(emailText);
 		
@@ -43,7 +43,7 @@ public class LoginPage {
 
 	public void EnterPassword(String passwordText) {
 		
-		eleUtils.EnterText(PasswordField, 30, passwordText);
+		eleUtils.EnterText(PasswordField, passwordText);
 		
 		//PasswordField.sendKeys(passwordText);
 		
@@ -59,7 +59,7 @@ public class LoginPage {
 
 	public void ClickOnLoginButton() {
 
-		eleUtils.ClickOnElement(LoginButtonField, 10);
+		eleUtils.ClickOnElement(LoginButtonField);
 		
 	//	LoginButtonField.click();
 		
