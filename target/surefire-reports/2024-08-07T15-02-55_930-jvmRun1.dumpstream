@@ -1,0 +1,1014 @@
+# Created at 2024-08-07T15:06:14.012
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:386)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+
+
+# Created at 2024-08-07T15:06:18.241
+Unexpected IOException with stream:   [31mWhen [0m[31mUser enters valid email address [0m[31m[1msnehalc2@gmail.com[0m [90m# stepDefinitions.Login.User_enters_valid_email_address(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:18.243
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80647a791a32ce56a5600209a2e51f71, sendKeysToElement [value, id]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50060}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50060/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (80647a791a32ce56a5600209a2e51f71)] -> xpath: //input[@id='input-email']]
+Session ID: 80647a791a32ce56a5600209a2e51f71
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at utils.ElementUtils.EnterText(ElementUtils.java:45)
+	at pages.LoginPage.EnterEmailAddress(LoginPage.java:36)
+	at stepDefinitions.Login.User_enters_valid_email_address(Login.java:57)
+	at ✽.User enters valid email address snehalc2@gmail.com(file:///C:/Users/Test/eclipse-workspace/TutorialsNinjaProJ/src/test/resources/features/Login.feature:7)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
+	at utils.ElementUtils.EnterText(ElementUtils.java:45)
+	at pages.LoginPage.EnterEmailAddress(LoginPage.java:36)
+	at stepDefinitions.Login.User_enters_valid_email_address(Login.java:57)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:348)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:574)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net
+
+# Created at 2024-08-07T15:06:18.245
+Unexpected IOException with stream: .http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:205)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1390)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1335)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1335)
+[0m
+
+
+# Created at 2024-08-07T15:06:18.259
+Unexpected IOException with stream:   [36mAnd [0m[36mUser enters valid password as [0m[36m[1m12345[0m                 [90m# stepDefinitions.Login.user_enters_valid_password_as(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:18.262
+Unexpected IOException with stream:   [36mAnd [0m[36mUser clicks on Login Button[0m                         [90m# stepDefinitions.Login.user_clicks_on_login_button()[0m
+
+
+# Created at 2024-08-07T15:06:18.264
+Unexpected IOException with stream:   [36mThen [0m[36mUser should get logged in successfully[0m             [90m# stepDefinitions.Login.user_should_get_logged_in_successfully()[0m
+
+
+# Created at 2024-08-07T15:06:18.266
+Unexpected IOException with stream: Login_with_valid_credentialsScenario Name fetched in Sysout
+
+
+# Created at 2024-08-07T15:06:18.299
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [80647a791a32ce56a5600209a2e51f71, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50060}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50060/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 80647a791a32ce56a5600209a2e51f71
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1053)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:224)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:259)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:208)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnectio
+
+# Created at 2024-08-07T15:06:18.300
+Unexpected IOException with stream: n.connectAsync(PlainHttpConnection.java:210)
+	... 9 more
+[0m
+
+
+# Created at 2024-08-07T15:06:18.304
+Unexpected IOException: 7,1,Login Functionality,Login with valid credentials #2(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C sendKeysToElement [value\002C id]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000AElement: [[ChromeDriver: chrome on windows (80647a791a32ce56a5600209a2e51f71)] -> xpath: //input[@id='input-email']]\000ASession ID: 80647a791a32ce56a5600209a2e51f71,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C sendKeysToElement [value\002C id]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000AElement: [[ChromeDriver: chrome on windows (80647a791a32ce56a5600209a2e51f71)] -> xpath: //input[@id='input-email']]\000ASession ID: 80647a791a32ce56a5600209a2e51f71,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C sendKeysToElement [value\002C id]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000AElement: [[ChromeDriver: chrome on windows (80647a791a32ce56a5600209a2e51f71)] -> xpath: //input[@id='input-email']]\000ASession ID: 80647a791a32ce56a5600209a2e51f71,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C sendKeysToElement [value\002C id]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000AElement: [[ChromeDriver: chrome on windows (80647a791a32ce56a5600209a2e51f71)] -> xpath: //input[@id='input-email']]\000ASession ID: 80647a791a32ce56a5600209a2e51f71\000ACaused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.net.SocketException: Connection reset\000A
+
+
+# Created at 2024-08-07T15:06:18.315
+Unexpected IOException: 7,1,Login Functionality,Login with valid credentials #2(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 80647a791a32ce56a5600209a2e51f71,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 80647a791a32ce56a5600209a2e51f71,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 80647a791a32ce56a5600209a2e51f71,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [80647a791a32ce56a5600209a2e51f71\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50060}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50060/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 80647a791a32ce56a5600209a2e51f71\000ACaused by: java.io.UncheckedIOException: java.net.ConnectException\000ACaused by: java.net.ConnectException\000ACaused by: java.nio.channels.ClosedChannelException\000A
+
+
+# Created at 2024-08-07T15:06:18.318
+Unexpected IOException: 5,1,Login Functionality,Login with valid credentials #3(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:18.338
+Unexpected IOException with stream: 
+Scenario Outline: Login with valid credentials            [90m# src/test/resources/features/Login.feature:16[0m
+
+
+# Created at 2024-08-07T15:06:18.340
+Unexpected IOException with stream: C:\Users\Test\eclipse-workspace\TutorialsNinjaProJ\src\test\resources\config\config.propertiesName of proFile path
+
+
+# Created at 2024-08-07T15:06:18.341
+Unexpected IOException with stream: Browser is: Chrome
+
+
+# Created at 2024-08-07T15:06:18.342
+Unexpected IOException with stream: url is: http://tutorialsNinja.com/demo/
+
+
+# Created at 2024-08-07T15:06:18.885
+Unexpected IOException with stream: Aug 07, 2024 3:06:18 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+
+
+# Created at 2024-08-07T15:06:20.082
+Unexpected IOException with stream: Aug 07, 2024 3:06:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+
+
+# Created at 2024-08-07T15:06:23.838
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69630af2b4e32360892146f6684655f4, deleteAllCookies []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50085}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50085/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69630af2b4e32360892146f6684655f4
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:855)
+	at myHooks.Hooks.setup(Hooks.java:37)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:855)
+	at myHooks.Hooks.setup(Hooks.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:348)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:574)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:205)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http
+
+# Created at 2024-08-07T15:06:23.840
+Unexpected IOException with stream: .SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1390)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1335)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1335)
+[0m
+
+
+# Created at 2024-08-07T15:06:23.877
+Unexpected IOException with stream:   [36mGiven [0m[36mUser is navigated to Login Page[0m                   [90m# stepDefinitions.Login.User_is_navigated_to_Login_Page()[0m
+
+
+# Created at 2024-08-07T15:06:23.878
+Unexpected IOException with stream:   [36mWhen [0m[36mUser enters valid email address [0m[36m[1msnehalc3@gmail.com[0m [90m# stepDefinitions.Login.User_enters_valid_email_address(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:23.880
+Unexpected IOException with stream:   [36mAnd [0m[36mUser enters valid password as [0m[36m[1m12345[0m                 [90m# stepDefinitions.Login.user_enters_valid_password_as(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:23.882
+Unexpected IOException with stream:   [36mAnd [0m[36mUser clicks on Login Button[0m                         [90m# stepDefinitions.Login.user_clicks_on_login_button()[0m
+
+
+# Created at 2024-08-07T15:06:23.884
+Unexpected IOException with stream:   [36mThen [0m[36mUser should get logged in successfully[0m             [90m# stepDefinitions.Login.user_should_get_logged_in_successfully()[0m
+
+
+# Created at 2024-08-07T15:06:23.886
+Unexpected IOException with stream: Login_with_valid_credentialsScenario Name fetched in Sysout
+
+
+# Created at 2024-08-07T15:06:23.894
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69630af2b4e32360892146f6684655f4, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50085}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50085/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 69630af2b4e32360892146f6684655f4
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1053)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:224)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:259)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:208)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnectio
+
+# Created at 2024-08-07T15:06:23.895
+Unexpected IOException with stream: n.connectAsync(PlainHttpConnection.java:210)
+	... 9 more
+[0m
+
+
+# Created at 2024-08-07T15:06:23.901
+Unexpected IOException: 7,1,Login Functionality,Login with valid credentials #3(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4\000ACaused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.net.SocketException: Connection reset\000A
+
+
+# Created at 2024-08-07T15:06:23.904
+Unexpected IOException: 7,1,Login Functionality,Login with valid credentials #3(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [69630af2b4e32360892146f6684655f4\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50085}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50085/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 69630af2b4e32360892146f6684655f4\000ACaused by: java.io.UncheckedIOException: java.net.ConnectException\000ACaused by: java.net.ConnectException\000ACaused by: java.nio.channels.ClosedChannelException\000A
+
+
+# Created at 2024-08-07T15:06:23.906
+Unexpected IOException: 5,1,Login Functionality,Login with InValid credentials(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:23.921
+Unexpected IOException with stream: 
+Scenario: Login with InValid credentials               [90m# src/test/resources/features/Login.feature:20[0m
+
+
+# Created at 2024-08-07T15:06:23.923
+Unexpected IOException with stream: C:\Users\Test\eclipse-workspace\TutorialsNinjaProJ\src\test\resources\config\config.propertiesName of proFile path
+
+
+# Created at 2024-08-07T15:06:23.925
+Unexpected IOException with stream: Browser is: Chrome
+
+
+# Created at 2024-08-07T15:06:23.926
+Unexpected IOException with stream: url is: http://tutorialsNinja.com/demo/
+
+
+# Created at 2024-08-07T15:06:24.402
+Unexpected IOException with stream: Aug 07, 2024 3:06:24 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+
+
+# Created at 2024-08-07T15:06:25.506
+Unexpected IOException with stream: Aug 07, 2024 3:06:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+
+
+# Created at 2024-08-07T15:06:28.815
+Unexpected IOException with stream:   [32mGiven [0m[32mUser is navigated to Login Page[0m                [90m# stepDefinitions.Login.User_is_navigated_to_Login_Page()[0m
+
+
+# Created at 2024-08-07T15:06:28.833
+Unexpected IOException with stream: value of abc is abc =sneha.chougule_Wed_Aug_07_15_06_28_IST_2024_@gmail.com
+
+
+# Created at 2024-08-07T15:06:29.895
+Unexpected IOException with stream:   [32mWhen [0m[32mUser enters Invalid email address[0m               [90m# stepDefinitions.Login.user_enters_invalid_email_address()[0m
+
+
+# Created at 2024-08-07T15:06:30.151
+Unexpected IOException with stream:   [32mAnd [0m[32mUser enters Invalid password as [0m[32m[1m"12345123456789"[0m [90m# stepDefinitions.Login.user_enters_invalid_password_as(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:30.776
+Unexpected IOException with stream:   [32mAnd [0m[32mUser clicks on Login Button[0m                      [90m# stepDefinitions.Login.user_clicks_on_login_button()[0m
+
+
+# Created at 2024-08-07T15:06:30.874
+Unexpected IOException with stream:   [32mThen [0m[32mUser should get error about invalid credentials[0m [90m# stepDefinitions.Login.user_should_get_error_about_invalid_credentials()[0m
+
+
+# Created at 2024-08-07T15:06:30.875
+Unexpected IOException with stream: Login_with_InValid_credentialsScenario Name fetched in Sysout
+
+
+# Created at 2024-08-07T15:06:31.160
+Unexpected IOException: 6,1,Login Functionality,Login with InValid credentials(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:31.162
+Unexpected IOException: 5,1,Login Functionality,Login with valid email and Invalid Password(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:31.192
+Unexpected IOException with stream: 
+Scenario: Login with valid email and Invalid Password                [90m# src/test/resources/features/Login.feature:29[0m
+
+
+# Created at 2024-08-07T15:06:31.193
+Unexpected IOException with stream: C:\Users\Test\eclipse-workspace\TutorialsNinjaProJ\src\test\resources\config\config.propertiesName of proFile path
+
+
+# Created at 2024-08-07T15:06:31.195
+Unexpected IOException with stream: Browser is: Chrome
+
+
+# Created at 2024-08-07T15:06:31.196
+Unexpected IOException with stream: url is: http://tutorialsNinja.com/demo/
+
+
+# Created at 2024-08-07T15:06:31.685
+Unexpected IOException with stream: Aug 07, 2024 3:06:31 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+
+
+# Created at 2024-08-07T15:06:32.885
+Unexpected IOException with stream: Aug 07, 2024 3:06:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+
+
+# Created at 2024-08-07T15:06:33.851
+Unexpected IOException with stream:       [31morg.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=127.0.6533.90)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f075b7fa68f4e9a6009319721ecf8641, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50125/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f075b7fa68f4e9a6009319721ecf8641
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1034)
+	at myHooks.Hooks.setup(Hooks.java:38)
+[0m
+
+
+# Created at 2024-08-07T15:06:33.893
+Unexpected IOException with stream:   [36mGiven [0m[36mUser is navigated to Login Page[0m                              [90m# stepDefinitions.Login.User_is_navigated_to_Login_Page()[0m
+
+
+# Created at 2024-08-07T15:06:33.895
+Unexpected IOException with stream:   [36mWhen [0m[36mUser enters valid email address [0m[36m[1m"snehal.chougule04@gmail.com"[0m [90m# stepDefinitions.Login.User_enters_valid_email_address(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:33.897
+Unexpected IOException with stream:   [36mAnd [0m[36mUser enters Invalid password as [0m[36m[1m"123456789"[0m                    [90m# stepDefinitions.Login.user_enters_invalid_password_as(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:33.899
+Unexpected IOException with stream:   [36mAnd [0m[36mUser clicks on Login Button[0m                                    [90m# stepDefinitions.Login.user_clicks_on_login_button()[0m
+
+
+# Created at 2024-08-07T15:06:33.905
+Unexpected IOException with stream:   [36mThen [0m[36mUser should get error about invalid credentials[0m               [90m# stepDefinitions.Login.user_should_get_error_about_invalid_credentials()[0m
+
+
+# Created at 2024-08-07T15:06:33.908
+Unexpected IOException with stream: Login_with_valid_email_and_Invalid_PasswordScenario Name fetched in Sysout
+
+
+# Created at 2024-08-07T15:06:33.917
+Unexpected IOException with stream:       [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.90)
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f075b7fa68f4e9a6009319721ecf8641, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50125}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50125/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f075b7fa68f4e9a6009319721ecf8641
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+[0m
+
+
+# Created at 2024-08-07T15:06:33.924
+Unexpected IOException: 7,1,Login Functionality,Login with valid email and Invalid Password(Login Functionality),null,disconnected: Unable to receive message from renderer\000A  (failed to check if window was closed: disconnected: not connected to DevTools)\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C maximizeCurrentWindow {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,null,disconnected: Unable to receive message from renderer\000A  (failed to check if window was closed: disconnected: not connected to DevTools)\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C maximizeCurrentWindow {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,disconnected: Unable to receive message from renderer\000A  (failed to check if window was closed: disconnected: not connected to DevTools)\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C maximizeCurrentWindow {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,org.openqa.selenium.WebDriverException: \000Adisconnected: Unable to receive message from renderer\000A  (failed to check if window was closed: disconnected: not connected to DevTools)\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C maximizeCurrentWindow {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641\000A
+
+
+# Created at 2024-08-07T15:06:33.929
+Unexpected IOException: 7,1,Login Functionality,Login with valid email and Invalid Password(Login Functionality),null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C screenshot {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,null,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C screenshot {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,no such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C screenshot {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641,org.openqa.selenium.NoSuchWindowException: \000Ano such window: target window already closed\000Afrom unknown error: web view not found\000A  (Session info: chrome=127.0.6533.90)\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [f075b7fa68f4e9a6009319721ecf8641\002C screenshot {}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50125}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50125/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: f075b7fa68f4e9a6009319721ecf8641\000A
+
+
+# Created at 2024-08-07T15:06:33.931
+Unexpected IOException: 5,1,Login Functionality,Login with Invalid email and valid Password(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:33.956
+Unexpected IOException with stream: 
+Scenario: Login with Invalid email and valid Password  [90m# src/test/resources/features/Login.feature:38[0m
+
+
+# Created at 2024-08-07T15:06:33.958
+Unexpected IOException with stream: C:\Users\Test\eclipse-workspace\TutorialsNinjaProJ\src\test\resources\config\config.propertiesName of proFile path
+
+
+# Created at 2024-08-07T15:06:33.960
+Unexpected IOException with stream: Browser is: Chrome
+
+
+# Created at 2024-08-07T15:06:33.962
+Unexpected IOException with stream: url is: http://tutorialsNinja.com/demo/
+
+
+# Created at 2024-08-07T15:06:34.460
+Unexpected IOException with stream: Aug 07, 2024 3:06:34 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+
+
+# Created at 2024-08-07T15:06:35.557
+Unexpected IOException with stream: Aug 07, 2024 3:06:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+
+
+# Created at 2024-08-07T15:06:39.090
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [22ef42211472e56980eac170c1f826f3, deleteAllCookies []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50139}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50139/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22ef42211472e56980eac170c1f826f3
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:855)
+	at myHooks.Hooks.setup(Hooks.java:37)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:855)
+	at myHooks.Hooks.setup(Hooks.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:348)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:574)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:205)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http
+
+# Created at 2024-08-07T15:06:39.092
+Unexpected IOException with stream: .SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1390)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1335)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1335)
+[0m
+
+
+# Created at 2024-08-07T15:06:39.096
+Unexpected IOException with stream:   [36mGiven [0m[36mUser is navigated to Login Page[0m                [90m# stepDefinitions.Login.User_is_navigated_to_Login_Page()[0m
+
+
+# Created at 2024-08-07T15:06:39.099
+Unexpected IOException with stream:   [36mWhen [0m[36mUser enters Invalid email address[0m               [90m# stepDefinitions.Login.user_enters_invalid_email_address()[0m
+
+
+# Created at 2024-08-07T15:06:39.101
+Unexpected IOException with stream:   [36mAnd [0m[36mUser enters valid password as [0m[36m[1m"12345"[0m            [90m# stepDefinitions.Login.user_enters_valid_password_as(java.lang.String)[0m
+
+
+# Created at 2024-08-07T15:06:39.103
+Unexpected IOException with stream:   [36mAnd [0m[36mUser clicks on Login Button[0m                      [90m# stepDefinitions.Login.user_clicks_on_login_button()[0m
+
+
+# Created at 2024-08-07T15:06:39.105
+Unexpected IOException with stream:   [36mThen [0m[36mUser should get error about invalid credentials[0m [90m# stepDefinitions.Login.user_should_get_error_about_invalid_credentials()[0m
+
+
+# Created at 2024-08-07T15:06:39.107
+Unexpected IOException with stream: Login_with_Invalid_email_and_valid_PasswordScenario Name fetched in Sysout
+
+
+# Created at 2024-08-07T15:06:39.114
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [22ef42211472e56980eac170c1f826f3, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\Users\Test\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50139}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50139/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22ef42211472e56980eac170c1f826f3
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:439)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at myHooks.Hooks.tearDown(Hooks.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invokeStatic(Invoker.java:80)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:45)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1053)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:224)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:259)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:208)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnectio
+
+# Created at 2024-08-07T15:06:39.115
+Unexpected IOException with stream: n.connectAsync(PlainHttpConnection.java:210)
+	... 9 more
+[0m
+
+
+# Created at 2024-08-07T15:06:39.118
+Unexpected IOException: 7,1,Login Functionality,Login with Invalid email and valid Password(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C deleteAllCookies []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3\000ACaused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.net.SocketException: Connection reset\000A
+
+
+# Created at 2024-08-07T15:06:39.121
+Unexpected IOException: 7,1,Login Functionality,Login with Invalid email and valid Password(Login Functionality),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.22.0'\002C revision: 'c5f3146703*'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '20.0.1'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [22ef42211472e56980eac170c1f826f3\002C screenshot []]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 127.0.6533.90\002C chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721...\002C userDataDir: C:\005CUsers\005CTest\005CAppData\005CLocal...}\002C fedcm:accounts: true\002C goog:chromeOptions: {debuggerAddress: localhost:50139}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:50139/devtoo...\002C se:cdpVersion: 127.0.6533.90\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 22ef42211472e56980eac170c1f826f3\000ACaused by: java.io.UncheckedIOException: java.net.ConnectException\000ACaused by: java.net.ConnectException\000ACaused by: java.nio.channels.ClosedChannelException\000A
+
+
+# Created at 2024-08-07T15:06:39.122
+Unexpected IOException: 5,1,Login Functionality,Login without providing the credentials(Login Functionality),null,null,null
+
+
+# Created at 2024-08-07T15:06:39.134
+Unexpected IOException with stream: 
+Scenario: Login without providing the credentials      [90m# src/test/resources/features/Login.feature:47[0m
+
+
+# Created at 2024-08-07T15:06:39.136
+Unexpected IOException with stream: C:\Users\Test\eclipse-workspace\TutorialsNinjaProJ\src\test\resources\config\config.propertiesName of proFile path
+
+
+# Created at 2024-08-07T15:06:39.137
+Unexpected IOException with stream: Browser is: Chrome
+
+
+# Created at 2024-08-07T15:06:39.138
+Unexpected IOException with stream: url is: http://tutorialsNinja.com/demo/
+
+
+# Created at 2024-08-07T15:06:39.729
+Unexpected IOException with stream: Aug 07, 2024 3:06:39 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+WARNING: There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+
+
+# Created at 2024-08-07T15:06:40.682
+Unexpected IOException with stream: Aug 07, 2024 3:06:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 127, returning the closest version; found: 126; Please update to a Selenium version that supports CDP version 127
+
+
