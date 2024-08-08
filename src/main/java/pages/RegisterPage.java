@@ -74,7 +74,7 @@ public class RegisterPage {
 
 	public void ClickOnContinueButton() {
 		
-		eleUtils.ClickOnElement(ContinueButton, 10);
+		eleUtils.ClickOnElement(ContinueButton);
 		
 		//ContinueButton.click();
 		
@@ -96,7 +96,7 @@ public class RegisterPage {
 	
 	public void ClickOnYesToNewsLetter() {
 		
-		eleUtils.ClickOnElement(YesToNewsLetterField, 10);
+		eleUtils.ClickOnElement(YesToNewsLetterField);
 		
 		//YesToNewsLetterField.click();
 	}

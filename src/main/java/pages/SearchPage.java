@@ -39,7 +39,7 @@ public class SearchPage {
 	
 	public void EnterInSearchBox(String producttext) {
 		
-		eleUtils.EnterText(SearchBoxfield, 10, producttext);
+		eleUtils.EnterText(SearchBoxfield, producttext);
 		
 	//	SearchBoxfield.sendKeys(producttext);
 				
@@ -48,7 +48,7 @@ public class SearchPage {
 
 	public void ClickOnSearchButton() {
 		
-		eleUtils.ClickOnElement(SearchButtonField, 10);
+		eleUtils.ClickOnElement(SearchButtonField);
 		
 		//SearchButtonField.click();
 		
