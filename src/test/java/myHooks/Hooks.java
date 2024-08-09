@@ -10,7 +10,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import factory.DriverFactory;
-import factory.WebDriverException;
+//import factory.WebDriverException;
 import io.cucumber.java.*;
 import utils.ConfigReader;
 
