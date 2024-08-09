@@ -1,5 +1,7 @@
 package factory;
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,6 +17,8 @@ public class DriverFactory {
 		if(browserName.equalsIgnoreCase("Chrome")) {
 			
 			 driver = new ChromeDriver();
+			 
+			System.out.println("Set the Chrome driver using new keyword");
 			
 		}else {
 			
@@ -29,7 +33,10 @@ public class DriverFactory {
 	
 	public static WebDriver getDriver() {
 		
+		System.out.println("Inside the getDriver code");
 		return driver;
+		
+		
 	}
 	
 }
