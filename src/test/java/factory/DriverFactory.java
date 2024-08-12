@@ -26,6 +26,7 @@ public class DriverFactory {
 			
 			
 		}
+		System.out.println("ChromeDriver initialized: " + driver);
 		return driver;
 		
 	}
@@ -33,7 +34,7 @@ public class DriverFactory {
 	
 	public static WebDriver getDriver() {
 		
-		System.out.println("Inside the getDriver code");
+		System.out.println("ChromeDriver value inside the getDriver method: " + driver);
 		return driver;
 		
 		
