@@ -37,7 +37,7 @@ public class Hooks {
 		driver = DriverFactory.getDriver();
 		System.out.println("ChromeDriver after get driver method return : " + driver);
 		
-		Thread.sleep(60);
+		Thread.sleep(60000);
 			
 		
 		
